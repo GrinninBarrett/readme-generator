@@ -2,9 +2,11 @@
 
 This is a tool to create a high quality README file based on user input, using Node.js and the Inquirer npm package.
 
+
 ## Table of Contents
   * [Technologies](#technologies)
   * [Functionality](#functionality)
+  * [File Architecture](#file-architecture)
   * [Challenges](#challenges)
   * [License](#license)
   * [Contact](#contact)
@@ -19,11 +21,24 @@ This is a tool to create a high quality README file based on user input, using N
 ## Functionality
 ![app-demo](./assets/images/demo.gif)
 
+
+## File Architecture
+├── README.md
+├── assets
+│   └── images
+├── index.js
+├── package-lock.json
+├── package.json
+└── utils
+    └── generateMarkdown.js
+
+
 ## Challenges
 
 
 
 ## Future Development
+
 
 
 ## License
