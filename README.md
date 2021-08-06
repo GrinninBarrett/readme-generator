@@ -2,10 +2,6 @@
 
 This is a tool to create a high quality README file based on user input, using Node.js and the Inquirer npm package.
 
-## Link to Deployed Site
-
-[README Generator](https://grinninbarrett.github.io/readme-generator)
-
 ## Table of Contents
   * [Technologies](#technologies)
   * [Functionality](#functionality)
