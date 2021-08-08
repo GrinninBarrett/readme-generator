@@ -37,22 +37,18 @@ function inquire() {
                 "GPLv3",
                 "GPLv2",
                 "BSD 3",
-                "LGPLv2.1",
-                "BSD 2",
-                "Microsoft Public",
-                "Microsoft .NET Library",
-                "LGPL v2.0"
+                "LGPLv3"
             ]
         },
         {
             type: "input",
             name: "contributions",
-            message: "How should others contribute to your project?"
+            message: "Explain how others can contribute to your project."
         },
         {
             type: "input",
             name: "tests",
-            message: "How can users test your project?"
+            message: "Explain how to test your project."
         },
         {
             type: "input",
@@ -66,7 +62,9 @@ function inquire() {
         }
     ])
     .then((data) => {
-        const fileName = `./readme-files/${data.title.toLowerCase().split(" ").join("-")}-README.md`;
+        const license = data.license;
+
+        const fileName = `./readme-files/README.md`;
         let fileToWrite = generateMarkdown(data);
         writeREADME(fileName, fileToWrite);
     })
