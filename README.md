@@ -18,12 +18,20 @@ This is a tool to create a high quality README file based on user input, using N
 
 
 ## Functionality
-[App Demonstration Video](./assets/images/demo.gif)
+[App Demonstration Video](https://youtu.be/qr-Uy0pvxJs)
+
+#### App Initialization
+- Be sure to first run <code>npm i</code> after cloning this repo or copying its code into your own files.
+- Once the appropriate node modules have been installed, run <code>node index.js</code> to initialize the app:
+
+![App Initialization](./assets/images/initialization.gif)
+
 
 
 ## Challenges
 - I couldn't format the text to be added to the generated README file as one normally would with JavaScript 
-(by indenting lines within a function), because the indentations were read literally and translated to the README.
+(by indenting lines within a function), because the indentations were read literally and translated to the README. 
+To fix this, I simply aligned the entire string one indentation more to the left from what would be normal.
 
 
 ## Contact
@@ -31,6 +39,6 @@ This is a tool to create a high quality README file based on user input, using N
 
 
 ## License
-Copyright 2021 Charles Tucker Barrett
+&copy; 2021 Charles Tucker Barrett
 
 [MIT License](https://opensource.org/licenses/MIT)
