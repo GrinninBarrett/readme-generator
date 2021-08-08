@@ -60,7 +60,7 @@ function renderLicenseLink(license) {
 
 
 // Returns the license section of README
-// If there is no license, return an empty string
+// If there is no license, add "All Rights Reserved"
 function renderLicenseSection(license, name) {
   let licenseSection;
   let licenseLink = renderLicenseLink(license);
@@ -75,7 +75,7 @@ function renderLicenseSection(license, name) {
 }
 
 
-// TODO: Create a function to generate markdown for README
+// Generate markdown for README
 function generateMarkdown(data) {
   // Get badge and link for licenses and create the license section
   let licenseBadge = renderLicenseBadge(data.license);
