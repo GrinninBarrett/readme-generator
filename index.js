@@ -28,19 +28,6 @@ function inquire() {
             message: "Explain how to use this application."
         },
         {
-            type: "list",
-            name: "license",
-            message: "What license would you like to include?",
-            choices: [
-                "Apache License 2.0",
-                "MIT",
-                "GPLv3",
-                "GPLv2",
-                "BSD 3",
-                "LGPLv3"
-            ]
-        },
-        {
             type: "input",
             name: "contributions",
             message: "Explain how others can contribute to your project."
@@ -51,6 +38,20 @@ function inquire() {
             message: "Explain how to test your project."
         },
         {
+            type: "list",
+            name: "license",
+            message: "What license would you like to include?",
+            choices: [
+                "Apache License 2.0",
+                "MIT",
+                "GPLv3",
+                "GPLv2",
+                "BSD 3",
+                "LGPLv3",
+                "No License - All Rights Reserved"
+            ]
+        },
+        {
             type: "input",
             name: "gitHub",
             message: "What is your GitHub username?"
@@ -59,6 +60,11 @@ function inquire() {
             type: "input",
             name: "email",
             message: "What is your email address?"
+        },
+        {
+            type: "input",
+            name: "name",
+            message: "What is your name?"
         }
     ])
     .then((data) => {
