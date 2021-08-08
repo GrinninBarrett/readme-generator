@@ -80,7 +80,7 @@ function init() {
     inquirer
     .prompt(questionsForUser)
     .then((data) => {
-        const fileName = `./readme-files/README.md`;
+        const fileName = `./generated-readme/README.md`;
         let fileToWrite = generateMarkdown(data);
         writeREADME(fileName, fileToWrite);
     })

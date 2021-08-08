@@ -80,11 +80,20 @@ function generateMarkdown(data) {
   // Get badge and link for licenses and create the license section
   let licenseBadge = renderLicenseBadge(data.license);
   let licenseSection = renderLicenseSection(data.license, data.name);
+  const formattedEmail = data.email.split("").map(char => {
+    if (char === ".") {
+      return"&#46;";
+    }
+    if (char === "@") {
+      return "&commat;";
+    } else {
+      return char;
+    }
+  }).join("");
 
   // Create README file based on user responses and license information
   // (tabbed back for formatting reasons within the generated README.md file)
-  let fileToWrite = `
-# ${data.title}
+  let fileToWrite = `# ${data.title}
 
 ${licenseBadge}
 
@@ -112,7 +121,7 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-For any questions, contact me at any time via email: ${data.email}\n
+For any questions, contact me at any time via email: ${formattedEmail}\n
 Check out my [GitHub profile](https://github.com/${data.gitHub})!
 
 ${licenseSection}
