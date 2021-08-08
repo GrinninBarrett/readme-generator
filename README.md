@@ -24,9 +24,6 @@ This is a tool to create a high quality README file based on user input, using N
 ## Challenges
 - I couldn't format the text to be added to the generated README file as one normally would with JavaScript 
 (by indenting lines within a function), because the indentations were read literally and translated to the README.
-- I learned how to use the <code>map()</code> method a bit better, which took some research. It was used to prevent 
-a user's email from being rendered as a link in the generated README.md preview by changing periods and the "@" symbol 
-to their respective character entity.
 
 
 ## Contact
