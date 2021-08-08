@@ -1,11 +1,12 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Returns the license badge, with link if available
 function renderLicenseBadge(license) {
 
   let badge;
   let formattedName = license.split(" ").join("%20");
   let licenseLink = renderLicenseLink(license);
 
+  // Check that user selected a license, and add "All Rights Reserved" if not in order to
+  // allow user to choose not to have a license, but still include the section in the README.md file
   if (licenseLink !== "") {
     badge = `[![License: ${license}](https://img.shields.io/badge/License-${formattedName}-blue.svg)](${licenseLink})`;
   } else {
@@ -16,7 +17,8 @@ function renderLicenseBadge(license) {
   return badge;
 }
 
-// TODO: Create a function that returns the license link
+
+// Returns the license link
 function renderLicenseLink(license) {
 
   let link;
@@ -56,7 +58,7 @@ function renderLicenseLink(license) {
   return link;
 }
 
-// TODO: Create a function that returns the license section of README
+
 // Returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, name) {
@@ -72,12 +74,15 @@ function renderLicenseSection(license, name) {
   return licenseSection;
 }
 
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  let license = data.license;
-  let name = data.name;
-  let licenseBadge = renderLicenseBadge(license);
-  let licenseSection = renderLicenseSection(license, name);
+  // Get badge and link for licenses and create the license section
+  let licenseBadge = renderLicenseBadge(data.license);
+  let licenseSection = renderLicenseSection(data.license, data.name);
+
+  // Create README file based on user responses and license information
+  // (tabbed back for formatting reasons within the generated README.md file)
   let fileToWrite = `
 # ${data.title}
 
@@ -112,6 +117,7 @@ Check out my [GitHub profile](https://github.com/${data.gitHub})!
 
 ${licenseSection}
 `;
+
 return fileToWrite;
 }
 
