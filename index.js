@@ -27,7 +27,7 @@ const questionsForUser = [
     },
     {
         type: "input",
-        name: "contributions",
+        name: "contributing",
         message: "Explain how others can contribute to your project."
     },
     {
