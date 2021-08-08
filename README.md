@@ -35,7 +35,7 @@ To fix this, I simply aligned the entire string one indentation more to the left
 
 
 ## Contact
-* Email - ctbarrett.tech@gmail.com
+Email me any time with questions, comments, or cat/dog photos! - ctbarrett.tech@gmail.com
 
 
 ## License
