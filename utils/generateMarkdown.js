@@ -3,9 +3,7 @@
 function renderLicenseBadge(license) {
 
   let badge;
-
   let formattedName = license.split(" ").join("%20");
-
   let licenseLink = renderLicenseLink(license);
 
   if (licenseLink !== "") {
@@ -53,22 +51,22 @@ function renderLicenseLink(license) {
       
     default:
       link = "";
-  
   }
 
   return link;
 }
 
 // TODO: Create a function that returns the license section of README
+// Returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, name) {
   let licenseSection;
   let licenseLink = renderLicenseLink(license);
   
   if (license !== "No License - All Rights Reserved") {
-    licenseSection = `### License\nThis project is licensed under the [${license}](${licenseLink}) license].`;
+    licenseSection = `## License\nThis project is licensed under the [${license}](${licenseLink}) license].`;
   } else {
-    licenseSection = `### License\n&copy; 2021 ${name} - All Rights Reserved`;
+    licenseSection = `## License\n&copy; 2021 ${name} - All Rights Reserved`;
   }
 
   return licenseSection;
@@ -85,8 +83,10 @@ function generateMarkdown(data) {
 
 ${licenseBadge}
 
+## Description
+${data.description}
+
 ## Table of Contents
-* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
@@ -94,22 +94,19 @@ ${licenseBadge}
 * [Questions](#questions)
 * [License](#license)
 
-### Description
-${data.description}
-
-### Installation
+## Installation
 ${data.installation}
 
-### Usage
+## Usage
 ${data.uses}
 
-### Contributing
+## Contributing
 ${data.contributing}
 
-### Tests
+## Tests
 ${data.tests}
 
-### Questions
+## Questions
 For any questions, contact me at any time via email: ${data.email}\n
 Check out my [GitHub profile](https://github.com/${data.gitHub})!
 
